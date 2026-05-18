@@ -156,7 +156,7 @@ a {
 }
 
 /* ==========================================================================
-   3. SECCIÓN DEL STAFF (Grid de 9 Integrantes)
+   3. SECCIÓN DEL STAFF (3D con Profundidad y Hover Antidesenfoque)
    ========================================================================== */
 
 .team-section {
@@ -167,7 +167,7 @@ a {
 }
 
 .team-header h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #333333;
   margin-bottom: 12px;
   font-weight: 700;
@@ -179,103 +179,96 @@ a {
   margin-bottom: 40px;
 }
 
-/* El motor responsivo: se calcula solo según el ancho de la pantalla */
+/* Grid de 3 columnas */
 .team-grid {
- display: grid;
-  /* En pantallas grandes arma 3 columnas fijas de igual tamaño, en celulares se adapta solo */
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px; /* Separación limpia entre tarjetas */
+  gap: 35px;
   justify-content: center;
 }
 
-/* Tarjeta individual */
 .member-card {
-  background-color: #ffffff;
-  border-radius: 16px;
+  background-color: #F7F2E6; /* Mismo fondo crema continuo de la web */
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  padding: 16px;
+  border: none; /* Chau bordes sólidos rígidos */
+  
+  /* --- LA SOLUCIÓN TÉCNICA: Sombras multicapa suaves --- */
+  /* Usamos RGBA del color #c37347 (195, 115, 71) con desenfoques altos */
+  
+  /* Capa 1: Sombra base difusa para profundidad (Desenfoque alto, baja opacidad) */
+  box-shadow: 0 10px 30px 2px rgba(195, 115, 71, 0.08), 
+              /* Capa 2: Contorno suave envolvente (Desenfoque muy alto, muy baja opacidad) */
+              0 4px 15px 0px rgba(195, 115, 71, 0.04),
+              /* Capa 3: Reflejo interno (Mismo color con bajísima opacidad) */
+              inset 0 1px 3px rgba(195, 115, 71, 0.1);
+              
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Efecto interactivo sutil */
+/* EFECTO HOVER: Eleva la tarjeta y profundiza la sombra suavemente */
 .member-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  transform: translateY(-8px); /* Elevación elegante */
+  
+  /* Sombras intensificadas pero manteniendo el desenfoque suave */
+  box-shadow: 0 20px 45px 5px rgba(195, 115, 71, 0.15), 
+              0 8px 25px 0px rgba(195, 115, 71, 0.07),
+              inset 0 1px 5px rgba(195, 115, 71, 0.2);
 }
-
-/* Forzamos contenedor cuadrado perfecto */
+/* CONTENEDOR DE LA FOTO: Este es el bloque que se va a mover */
 .image-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background-color: #F1E8D9; /* Tu color de huellitas como fondo de carga */
-}
-
-.member-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background-color: #F7F2E6;
-  object-position: center top; /* Enfoca las caritas arriba */
-  display: block;
-}
-
-/* Textos de la tarjeta */
-.member-info {
-  padding: 20px;
-  text-align: center;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.member-info h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #333333;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.member-role {
-  font-size: 1.1rem;
-  color: #47C2AE; /* Color identitario sutil para los roles */
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-/* Estilo especial para Lucy (Incógnito) */
-.mystery-member .placeholder-bg {
-  background-color: #F1E8D9; /* Color de tus huellitas */
+  height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background-color: transparent;
+  
+  /* Transición para el movimiento interno de la foto */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.mystery-avatar {
-  font-size: 2.8rem;
-  animation: pulse 2s infinite ease-in-out;
+/* TRUCO CLAVE: Al hacer hover en la tarjeta, SOLO se eleva la foto. El texto queda fijo */
+.member-card:hover .image-wrapper {
+  transform: translateY(-8px);
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
+/* Imagen integrada de la mascota */
+.member-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Cuida tus fotos completas */
+  display: block;
+  border-radius: 16px;
 }
 
+/* TEXTOS: Se quedan 100% estáticos en su lugar, garantizando nitidez absoluta */
+.member-info {
+  padding: 16px 8px 8px 8px;
+  text-align: center;
+}
 
+/* Nombre en tu Marrón Identitario */
+.member-info h3 {
+  font-size: 1.5rem;
+  color: #8B5A2B;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
 
-
-
-
-
-
-
-
-
+/* Rol descriptivo claro */
+.member-role {
+  font-size: 1.1rem;
+  color: #555555;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
 
 
 
