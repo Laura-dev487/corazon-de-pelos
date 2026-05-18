@@ -1,0 +1,95 @@
+/* ==========================================================================
+   1. VARIABLES DE DISEÑO (Custom Properties)
+   ========================================================================== */
+:root {
+  /* Paleta de Colores de "Corazón de Pelos" */
+  --color-bg-main: #F7F2E6;      /* Fondo crema principal */
+  --color-bg-pattern: #F1E8D9;   /* Color para las huellitas de fondo */
+  --color-brand: #47C2AE;        /* Turquesa de los botones (CTA) */
+  --color-text: #040202;         /* Negro profundo para máxima legibilidad */
+  --color-white: #FFFFFF;
+
+  /* Tipografía de Sistema (Rendimiento 100/100) */
+  --font-main: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ==========================================================================
+   2. RESET DE ACCESIBILIDAD Y RENDIMIENTO
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Suaviza el scroll y ajusta el tamaño base para accesibilidad */
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  font-weight: 400;
+  background-color: var(--color-bg-main);
+  color: var(--color-text);
+  line-height: 1.6; 
+  min-height: 100vh;
+  /* Suavizado de tipografía para pantallas */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  
+}
+
+img, picture, svg {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================================================
+   HEADER Y BANNER (Estrategia Fluid-Contain)
+   ========================================================================== */
+
+.main-header {
+  width: 100%;
+  /* Usamos exactamente el color de fondo de tu imagen para unificar todo */
+  background-color: var(--color-bg-main); 
+  overflow: hidden;
+}
+
+.banner-container {
+  width: 100%;
+  max-width: 1200px; /* Evita que el banner se estire hasta el infinito en monitores gigantes */
+  margin: 0 auto;    /* Centra el contenedor en pantallas grandes */
+  display: block;
+}
+
+.banner-img {
+  width: 100%;
+  /* Forzamos a que en pantallas chicas ocupe un porcentaje cómodo del alto visual */
+  height: 40vh; 
+  max-height: 450px; /* Te asegura que en pantallas grandes no se vaya de tema */
+  min-height: 200px; /* Evita que quede demasiado minúsculo en celulares muy chicos */
+  
+  /* EL TRUCO CLAVE: Muestra la imagen COMPLETA, adaptándose al espacio sin deformar */
+  object-fit: contain; 
+  object-position: center center;
+  
+  display: block;
+}
+
+/* Ajuste fino para pantallas de escritorio (Tablets grandes y PC) */
+@media (min-width: 768px) {
+  .banner-img {
+    height: 50vh; /* Le damos un poco más de aire en pantallas grandes */
+  }
+}
