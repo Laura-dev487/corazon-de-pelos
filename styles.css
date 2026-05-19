@@ -390,6 +390,210 @@ a {
 .prev-btn:hover { transform: scale(1.08) translateX(-2px); }
 .next-btn:hover { transform: scale(1.08) translateX(2px); }
 
+/* ==========================================================================
+   5. SECCIÓN DE CIERRE EMOCIONAL Y BRANDING (Estructura Unificada)
+   ========================================================================= */
+.emotional-closure-section {
+  background-color: #F7F2E6; 
+  padding: 80px 20px 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Huellas decorativas */
+.bg-paw {
+  position: absolute;
+  pointer-events: none;
+}
+.paw-left { top: 15%; left: 8%; transform: rotate(-15deg); }
+.paw-right { bottom: 25%; right: 8%; transform: rotate(20deg); }
+
+.closure-stacked-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+.closure-content-text {
+  text-align: center;
+  width: 100%;
+}
+
+.closure-content-text h2 {
+  font-size: 2.2rem;
+  color: #8B5A2B;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.closure-emotive-text {
+  font-size: 1.15rem;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* Caja de Instagram */
+.instagram-cta-wrapper {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  box-shadow: 0 8px 25px rgba(195, 115, 71, 0.04);
+  text-align: left;
+}
+
+.instagram-launch-text {
+  margin: 0;
+  color: #333333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Enlace e icono dinámico de Instagram */
+.instagram-svg-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  flex-shrink: 0;
+}
+
+.instagram-svg-link:hover {
+  transform: scale(1.15); /* Efecto pop sutil al pasar el mouse */
+}
+
+/* Tarjeta Unificada de Darcy y Logo */
+.closure-branding-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.darcy-logo-card {
+  display: flex;
+  flex-direction: column; /* Cambiamos a columna para apilar las fotos y el texto */
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 25px 35px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  max-width: 400px; /* Evita que la tarjeta se ensanche de más */
+}
+
+/* Fila interna para contener las dos imágenes lado a lado */
+.images-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px; /* Espacio antes de la frase */
+}
+
+.closure-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.closure-darcy-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #8B5A2B;
+}
+
+.darcy-quote {
+  margin: 0; /* Limpiamos márgenes */
+  font-style: italic;
+  font-weight: 600;
+  color: #8B5A2B;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .instagram-cta-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .images-row {
+    gap: 15px;
+  }
+  .closure-logo { width: 80px; height: 80px; }
+  .closure-darcy-img { width: 110px; height: 110px; }
+  .paw-left, .paw-right { display: none; }
+}
+/* ==========================================================================
+   6. MAIN FOOTER (Pie de página)
+   ========================================================================== */
+.main-footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.developer-credit {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.footer-link {
+  color: #c37347;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+
+/* --- RESPONSIVE DESIGN (Para Celulares y Tablets) --- */
+@media (max-width: 850px) {
+  .closure-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .closure-text-block {
+    text-align: center;
+  }
+  
+  .instagram-notice-box {
+    border-left: none;
+    border-top: 5px solid #c37347;
+    border-radius: 0 0 16px 16px;
+  }
+}
 /* Ajustes para celulares: achicamos un poco el margen para que entre todo cómodo */
 @media (max-width: 480px) {
   .single-carousel-wrapper {
@@ -400,6 +604,28 @@ a {
     width: 40px;
     height: 40px;
     font-size: 1.1rem;
+  }
+}
+
+/* --- RESPONSIVE DESIGN (Celulares) --- */
+@media (max-width: 600px) {
+  .instagram-cta-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .darcy-logo-card {
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .closure-logo { width: 75px; height: 75px; }
+  .closure-darcy-img { width: 110px; height: 110px; }
+  
+  .paw-left, .paw-right {
+    display: none; /* Ocultamos las huellas en pantallas chicas para no molestar */
   }
 }
 
