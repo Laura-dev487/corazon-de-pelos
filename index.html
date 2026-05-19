@@ -201,86 +201,27 @@
     <p class="products-subtitle">Accesorios únicos creados con todo el amor que ellos nos inspiran.</p>
   </div>
 
-  <div class="carousel-wrapper">
+  <div class="single-carousel-wrapper">
     
-    <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior">
-      &#10094;
-    </button>
+    <button class="nav-btn prev-btn" id="prevBtn" aria-label="Producto Anterior">&#10094;</button>
 
-    <div class="products-carousel" id="productsCarousel">
-      
-      <div class="product-card">
-        <div class="product-image-wrapper">
-          <img src="img/abrelatas.webp" alt="Abrelatas temático" class="product-img">
-        </div>
-        <div class="product-info">
-          <h3>Abrelatas</h3>
-        </div>
+    <div class="product-single-card" id="productCard">
+      <div class="product-image-wrapper">
+        <img src="img/abrelatas.webp" alt="Abrelatas temático" id="carouselImg" class="product-img">
       </div>
-
-      <div class="product-card">
-        <div class="product-image-wrapper">
-          <img src="img/apoya-manos.webp" alt="Apoya manos ergonómico" class="product-img">
-        </div>
-        <div class="product-info">
-          <h3>Apoya manos</h3>
-        </div>
+      <div class="product-info">
+        <h3 id="carouselTitle">Abrelatas</h3>
       </div>
-
-      <div class="product-card">
-        <div class="product-image-wrapper">
-          <img src="img/monedero-chancho.webp" alt="Monedero Chancho" class="product-img">
-        </div>
-        <div class="product-info">
-          <h3>Monederos chancho</h3>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image-wrapper">
-          <img src="img/huellita.webp" alt="Accesorio Huellita" class="product-img">
-        </div>
-        <div class="product-info">
-          <h3>Huellita</h3>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image-wrapper">
-          <img src="img/llaveros.webp" alt="Llaveros personalizados" class="product-img">
-        </div>
-        <div class="product-info">
-          <h3>Llaveros</h3>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image-wrapper">
-          <img src="img/porta-birome.webp" alt="Porta birome de diseño" class="product-img">
-        </div>
-        <div class="product-info">
-          <h3>Porta birome</h3>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image-wrapper">
-          <img src="img/porta-notas.webp" alt="Porta notas de escritorio" class="product-img">
-        </div>
-        <div class="product-info">
-          <h3>Porta notas</h3>
-        </div>
-      </div>
-
     </div>
 
-    <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente">
-      &#10095;
-    </button>
+    <button class="nav-btn next-btn" id="nextBtn" aria-label="Siguiente Producto">&#10095;</button>
+    
   </div>
-</section>   
+</section>
         
         </main>
+
+        <script src="carousel.js"></script>
 
         </body>
 

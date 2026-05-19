@@ -271,12 +271,13 @@ a {
 }
 
 /* ==========================================================================
-   4. SECCIÓN DE PRODUCTOS DESTACADOS (Carrusel con Scroll Suave)
+   4. SECCIÓN DE PRODUCTOS (Diseño de Tarjeta Única y Flechas a los Lados)
    ========================================================================== */
 
 .products-section {
-  max-width: 100%;
-  padding: 60px 0; /* Dejamos los lados libres para que el carrusel sangre hasta el borde */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -291,102 +292,116 @@ a {
   color: #626262;
   font-size: 1.1rem;
   margin-bottom: 40px;
-  padding: 0 20px;
 }
 
-/* Contenedor que maneja el área visible del carrusel */
-.carousel-container {
-  width: 100%;
-  padding: 20px 40px 40px 40px; /* Espacio extra abajo para que la sombra no se corte */
-  overflow: hidden;
-}
-
-/* La tira del carrusel: Corregimos el scroll y la propiedad de imán */
-.products-carousel {
+/* Contenedor principal: alinea las flechas y la tarjeta en una sola fila horizontal */
+.single-carousel-wrapper {
   display: flex;
-  gap: 30px;
-  overflow-x: auto; /* Forzamos el desborde horizontal para que ruede */
-  scroll-behavior: smooth;
-  
-  /* --- CORRECCIÓN AQUÍ: Agregamos el prefijo 'scroll-' para que el navegador lo reconozca --- */
-  scroll-snap-type: x mandatory; 
-  
-  padding: 10px 40px; /* Agregamos padding a los lados para que la primera y última tarjeta no se peguen al borde */
-  scrollbar-width: none; /* Firefox */
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Espacio elegante entre las flechas y la tarjeta */
+  max-width: 650px; /* Controla el ancho máximo de toda la escena */
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.products-carousel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari y Edge */
-}
-
-/* CADA PRODUCTO (Aseguramos que mantenga su ancho y herede el imán) */
-.product-card {
-  /* flex-shrink: 0 evita que el contenedor intente exprimir las tarjetas para que entren todas juntas */
-  flex: 0 0 260px; 
-  
-  /* --- CORRECCIÓN AQUÍ: Cambiamos a 'scroll-snap-align' para sincronizar con el contenedor --- */
-  scroll-snap-align: start; 
-  
+/* LA TARJETA CENTRAL: Reutiliza tu hermosa sombra caramelo suave */
+.product-single-card {
   background-color: #F7F2E6;
   border-radius: 24px;
-  padding: 14px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px; /* Tamaño ideal para que se vea imponente */
   display: flex;
   flex-direction: column;
   
-  /* Sombra caramelo #c37347 */
-  box-shadow: 0 10px 25px rgba(195, 115, 71, 0.06), 
-              0 4px 12px rgba(195, 115, 71, 0.03);
-  transition: box-shadow 0.3s ease;
-}
-/* Efecto Hover: Intensifica sombra sin mover el bloque para cuidar las letras */
-.product-card:hover {
-  box-shadow: 0 16px 35px rgba(195, 115, 71, 0.12);
+  box-shadow: 0 12px 30px rgba(195, 115, 71, 0.08), 
+              0 4px 15px rgba(195, 115, 71, 0.04);
+              
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Contenedor de la foto del producto */
+/* Hover sutil en la tarjeta */
+.product-single-card:hover {
+  box-shadow: 0 20px 40px rgba(195, 115, 71, 0.15);
+}
+
+/* Contenedor interno de la foto con fondo blanco limpio */
 .product-image-wrapper {
   width: 100%;
-  height: 240px; /* Alto unificado para productos */
+  height: 350px; /* Un poco más alta para que destaque bien el producto */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: transparent;
-  background-color: #ffffff; /* Le da una base blanca limpia para estandarizar los fondos de los productos */
-  border-radius: 16px; /* Acompaña el redondeado de la foto */
-  
-  /* Animación exclusiva para la foto al hacer hover */
+  background-color: #F7F2E6;
+  border-radius: 16px;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Al hacer hover en la tarjeta, la foto se eleva suavemente */
-.product-card:hover .product-image-wrapper {
-  transform: translateY(-6px);
+.product-single-card:hover .product-image-wrapper {
+  transform: translateY(-6px); /* Elevación suave de la foto */
 }
 
 .product-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Evita que tus fotos de productos se corten */
+  object-fit: cover;
   display: block;
-  border-radius: 16px;
+  /* 🛠️ TRUCO COHETE: Agrandamos la imagen un 3% para empujar las líneas negras hacia afuera del área visible */
+  transform: scale(1.03);
 }
 
-/* Bloque del nombre del producto */
+/* Info del producto */
 .product-info {
-  padding: 14px 4px 4px 4px;
-  text-align: center;
+  padding: 18px 4px 4px 4px;
 }
 
-/* Nombre en tu Marrón Identitario, bien legible y estático */
 .product-info h3 {
-  font-size: 1.2rem;
-  color: #8B5A2B; /* Marrón chocolate de las huellas */
+  font-size: 1.3rem;
+  color: #8B5A2B; /* Tu marrón identitario */
   margin: 0;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
 
+/* --- LAS FLECHAS DE CONTROL A LOS LADOS --- */
+.nav-btn {
+  background-color: #8B5A2B;
+  color: #ffffff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Evita que las flechas se deformen */
+  box-shadow: 0 4px 12px rgba(139, 90, 43, 0.25);
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #c37347; /* Marrón del perrito al pasar el mouse */
+  box-shadow: 0 6px 18px rgba(195, 115, 71, 0.35);
+}
+
+.prev-btn:hover { transform: scale(1.08) translateX(-2px); }
+.next-btn:hover { transform: scale(1.08) translateX(2px); }
+
+/* Ajustes para celulares: achicamos un poco el margen para que entre todo cómodo */
+@media (max-width: 480px) {
+  .single-carousel-wrapper {
+    gap: 12px;
+    padding: 10px;
+  }
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
 
 
 /* Ajuste fino para pantallas de escritorio (Tablets grandes y PC) */
