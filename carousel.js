@@ -10,6 +10,12 @@ const productsData = [
   { title: "Huellita", img: "img/huellita.webp" },
   { title: "Llaveros", img: "img/llaveros.webp" },
   { title: "Porta birome", img: "img/porta-birome.webp" },
+  { title: "Atrapa sol mariposa", img: "img/atrapasol-mariposa.webp"},
+  { title: "Atrapa sol Caballito de mar", img: "img/atrapasol-caballito.webp"},
+  { title: "Neceser", img: "img/neceser.webp"},
+  { title: "Llavero ositos", img: "img/llavero-ositos.webp"},
+  { title: "Pulsera de gatitos", img: "img/pulseras-gatitos.webp"},
+  { title: "Porta bálsamo labial", img: "img/porta-balsamo.webp"},
   { title: "Porta notas", img: "img/porta-notas.webp" } 
 ];
 

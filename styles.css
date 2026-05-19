@@ -402,13 +402,6 @@ a {
   overflow: hidden;
 }
 
-/* Huellas decorativas */
-.bg-paw {
-  position: absolute;
-  pointer-events: none;
-}
-.paw-left { top: 15%; left: 8%; transform: rotate(-15deg); }
-.paw-right { bottom: 25%; right: 8%; transform: rotate(20deg); }
 
 .closure-stacked-container {
   max-width: 800px;
@@ -469,7 +462,7 @@ a {
 
 .community-heading {
   font-size: 2.3rem;
-  color: #8B5A2B; /* Tu marrón identitario */
+  color: #8B5A2B; 
   font-weight: 700;
   margin-bottom: 6px;
 }
@@ -486,6 +479,7 @@ a {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 18px;
+  
 }
 
 /* Estilos e interacción del SVG de Instagram */
@@ -498,7 +492,8 @@ a {
 .instagram-icon {
   width: 42px;
   height: 42px;
-  fill: url(#instagram-gradient); /* Aplica el degradé nativo definido en el HTML */
+  fill: url(#instagram-gradient); 
+  margin-top: 30px;
 }
 
 .instagram-svg-link:hover {
@@ -572,21 +567,7 @@ a {
   text-align: center;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 600px) {
-  .instagram-cta-wrapper {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  .images-row {
-    gap: 15px;
-  }
-  .closure-logo { width: 80px; height: 80px; }
-  .closure-darcy-img { width: 110px; height: 110px; }
-  .paw-left, .paw-right { display: none; }
-}
+
 /* ==========================================================================
    6. MAIN FOOTER (Pie de página)
    ========================================================================== */
@@ -626,39 +607,12 @@ a {
 }
 
 
-/* --- RESPONSIVE DESIGN (Para Celulares y Tablets) --- */
-@media (max-width: 850px) {
-  .closure-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-  
-  .closure-text-block {
-    text-align: center;
-  }
-  
-  .instagram-notice-box {
-    border-left: none;
-    border-top: 5px solid #c37347;
-    border-radius: 0 0 16px 16px;
-  }
-}
-/* Ajustes para celulares: achicamos un poco el margen para que entre todo cómodo */
-@media (max-width: 480px) {
-  .single-carousel-wrapper {
-    gap: 12px;
-    padding: 10px;
-  }
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-  }
-}
+@media (max-width: 780px) {
 
-/* --- RESPONSIVE DESIGN (Celulares) --- */
-@media (max-width: 600px) {
+.banner-img {
+    height: 50vh; /* Le damos un poco más de aire en pantallas grandes */
+  }
+
   .instagram-cta-wrapper {
     flex-direction: column;
     text-align: center;
@@ -674,15 +628,81 @@ a {
   .closure-logo { width: 75px; height: 75px; }
   .closure-darcy-img { width: 110px; height: 110px; }
   
-  .paw-left, .paw-right {
-    display: none; /* Ocultamos las huellas en pantallas chicas para no molestar */
+  .single-carousel-wrapper {
+    gap: 12px;
+    padding: 10px;
+  }
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .closure-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .closure-text-block {
+    text-align: center;
+  }
+
+  .images-row {
+    gap: 15px;
+  }
+  .closure-logo { width: 80px; height: 80px; }
+  .closure-darcy-img { width: 110px; height: 110px; }
+  .paw-left, .paw-right { display: none; }
+
+  /* 1. Hacemos que el grid sea una sola columna centrada */
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espacio entre una tarjeta y otra */
+    padding: 0 15px;
+  }
+
+  /* 2. Limitamos el ancho de las tarjetas para que no se vean gigantes */
+  .member-card {
+    width: 90%;          /* Ocupa el 90% de la pantalla */
+    max-width: 350px;    /* Pero no más de 350px (tamaño ideal para mobile) */
+    margin: 0;           /* Eliminamos márgenes laterales automáticos */
+  }
+
+  /* 3. Ajustamos la imagen para que tenga una altura fija y elegante */
+  .image-wrapper {
+    height: 280px;       /* Altura controlada */
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Esto evita que se estire la foto */
+  }
+
+  /* 4. Ajustamos los textos para que no se vean enormes */
+  .member-info h3 {
+    font-size: 1.4rem;
+    margin-top: 15px;
+  }
+
+  .member-role {
+    font-size: 1rem;
+    margin-top: 5px;
   }
 }
+  
+  
 
 
-/* Ajuste fino para pantallas de escritorio (Tablets grandes y PC) */
-@media (min-width: 768px) {
-  .banner-img {
-    height: 50vh; /* Le damos un poco más de aire en pantallas grandes */
-  }
-}
+
+
+
+
+
+
+
