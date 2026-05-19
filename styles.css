@@ -438,38 +438,86 @@ a {
   margin-bottom: 35px;
 }
 
-/* Caja de Instagram */
-.instagram-cta-wrapper {
-  background-color: #ffffff;
-  padding: 25px 30px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  box-shadow: 0 8px 25px rgba(195, 115, 71, 0.04);
-  text-align: left;
+/* Sección General */
+.community-section {
+  max-width: 1100px;
+  margin: 50px auto 20px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-.instagram-launch-text {
-  margin: 0;
-  color: #333333;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  flex: 1;
+/* Tarjeta contenedora exclusiva de la IMAGEN */
+.community-image-container {
+  width: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  /* Sombra suave solo para sobreelevar la foto sobre el fondo crema */
+  box-shadow: 0 12px 30px rgba(195, 115, 71, 0.08);
+  margin-bottom: 35px;
 }
 
-/* Enlace e icono dinámico de Instagram */
+.community-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+}
+/* Bloque de texto sobre el fondo crema de la web */
+.community-text-block {
+  padding: 10px 0 30px 0;
+}
+
+.community-heading {
+  font-size: 2.3rem;
+  color: #8B5A2B; /* Tu marrón identitario */
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.community-subheading {
+  font-size: 1.3rem;
+  color: #555555;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.community-cta {
+  color: #626262;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* Estilos e interacción del SVG de Instagram */
 .instagram-svg-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  flex-shrink: 0;
+}
+
+.instagram-icon {
+  width: 42px;
+  height: 42px;
+  fill: url(#instagram-gradient); /* Aplica el degradé nativo definido en el HTML */
 }
 
 .instagram-svg-link:hover {
-  transform: scale(1.15); /* Efecto pop sutil al pasar el mouse */
+  transform: scale(1.18); /* Un salto elástico divertido al pasar el mouse */
+}
+
+/* Bloque del Agradecimiento Final */
+.community-thanks-block {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(195, 115, 71, 0.15); /* Una caricia de línea para separar */
+}
+
+.community-thanks-block p {
+  font-size: 1.4rem;
+  color: #8B5A2B;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin: 0;
 }
 
 /* Tarjeta Unificada de Darcy y Logo */
