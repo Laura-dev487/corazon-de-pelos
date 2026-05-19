@@ -175,7 +175,8 @@ a {
 
 .team-subtitle {
   color: #626262;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 40px;
 }
 
@@ -212,7 +213,6 @@ a {
 
 /* EFECTO HOVER: Eleva la tarjeta y profundiza la sombra suavemente */
 .member-card:hover {
-  transform: translateY(-8px); /* Elevación elegante */
   
   /* Sombras intensificadas pero manteniendo el desenfoque suave */
   box-shadow: 0 20px 45px 5px rgba(195, 115, 71, 0.15), 
@@ -228,7 +228,8 @@ a {
   justify-content: center;
   overflow: hidden;
   background-color: transparent;
-  
+  backface-visibility: hidden;
+  transform: translateZ(0);  
   /* Transición para el movimiento interno de la foto */
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -290,7 +291,8 @@ a {
 
 .products-subtitle {
   color: #626262;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 40px;
 }
 
