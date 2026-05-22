@@ -612,7 +612,7 @@ a {
 @media (max-width: 780px) {
 
 .banner-img {
-    height: 50vh; /* Le damos un poco más de aire en pantallas grandes */
+    height: 50vh; 
   }
 
   .instagram-cta-wrapper {
@@ -630,15 +630,51 @@ a {
   .closure-logo { width: 75px; height: 75px; }
   .closure-darcy-img { width: 110px; height: 110px; }
   
-  .single-carousel-wrapper {
-    gap: 12px;
-    padding: 10px;
+  /* Ajustes para el Carrusel en móviles */
+
+.single-carousel-wrapper {
+  display: flex;
+  flex-direction: column; /* Esto pone los elementos uno debajo del otro */
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 10px;
+}
+
+ /* Ajuste de la tarjeta para que sea más cuadrada y cómoda */
+.product-single-card {
+  width: 90%;          /* Un poco de aire a los costados */
+  max-width: 320px;    /* Tamaño ideal para que la imagen se luzca */
+  height: auto;        /* Deja que el contenido decida la altura */
+  padding: 15px;
+}
+
+ /* La imagen dentro de la tarjeta */
+.product-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Mantiene la imagen perfectamente cuadrada */
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+  .product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+  .product-info {
+    padding: 15px;          /* Espacio para que el texto no toque el borde */
+    text-align: center;
   }
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-  }
+
+  /* Los botones ahora debajo */
+.nav-btn {
+  position: static;    /* Quitamos el posicionamiento absoluto */
+  width: 50px;         /* Botones un poco más grandes para dedos */
+  height: 50px;
+  margin: 0 10px;      /* Espacio entre las flechas */
+}
 
   .closure-container {
     flex-direction: column;
