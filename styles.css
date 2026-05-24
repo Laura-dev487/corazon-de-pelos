@@ -2,14 +2,11 @@
    1. VARIABLES DE DISEÑO (Custom Properties)
    ========================================================================== */
 :root {
-  /* Paleta de Colores de "Corazón de Pelos" */
-  --color-bg-main: #F7F2E6;      /* Fondo crema principal */
-  --color-bg-pattern: #F1E8D9;   /* Color para las huellitas de fondo */
-  --color-brand: #47C2AE;        /* Turquesa de los botones (CTA) */
-  --color-text: #040202;         /* Negro profundo para máxima legibilidad */
-  --color-white: #FFFFFF;
-
-  /* Tipografía de Sistema (Rendimiento 100/100) */
+ 
+  --color-bg-main: #F7F2E6;     
+  --color-bg-pattern: #F1E8D9; 
+   --color-text: #040202;         
+  --color-white: #FFFFFF; 
   --font-main: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -22,8 +19,7 @@
   padding: 0;
 }
 
-html {
-  /* Suaviza el scroll y ajusta el tamaño base para accesibilidad */
+html {  
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
@@ -34,8 +30,7 @@ body {
   background-color: var(--color-bg-main);
   color: var(--color-text);
   line-height: 1.6; 
-  min-height: 100vh;
-  /* Suavizado de tipografía para pantallas */
+  min-height: 100vh;  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   
@@ -60,16 +55,15 @@ a {
    ========================================================================== */
 
 .main-header {
-  width: 100%;
-  /* Usamos exactamente el color de fondo de tu imagen para unificar todo */
+  width: 100%;  
   background-color: var(--color-bg-main); 
   overflow: hidden;
 }
 
 .banner-container {
   width: 100%;
-  max-width: 1200px; /* Evita que el banner se estire hasta el infinito en monitores gigantes */
-  margin: 0 auto;    /* Centra el contenedor en pantallas grandes */
+  max-width: 1200px; 
+  margin: 0 auto;   
   display: block;
 }
 
@@ -88,13 +82,13 @@ a {
    ========================================================================== */
 
 .story-section {
-  padding: 60px 20px 40px 20px; /* Le damos aire arriba y abajo */
+  padding: 60px 20px 40px 20px; 
   text-align: center;
 }
 
 .story-container {
-  max-width: 750px; /* Ancho óptimo de lectura para que no queden líneas eternas */
-  margin: 0 auto;   /* Centra el bloque de texto */
+  max-width: 750px; 
+  margin: 0 auto;  
 }
 
 .story-lead {
@@ -108,15 +102,13 @@ a {
   font-size: 1.2rem;
   font-weight: 500;
   color: #626262;
-  margin-bottom: 32px;
-  /* Estilo tipo cita sutil para el texto más emotivo */
+  margin-bottom: 32px;  
   font-style: italic; 
-  background-color: rgba(255, 255, 255, 0.4); /* Un sutil reflejo blanco de fondo para destacar */
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 24px;
   border-radius: 12px;
 }
 
-/* Utilidad para accesibilidad (oculta títulos que solo queremos que lean los lectores de pantalla) */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -128,29 +120,24 @@ a {
   border: 0;
 }
 
-
-/* Contenedor en línea para que los íconos fluyan hermosos al final del texto */
 .story-icons {
   display: inline-flex;
   align-items: center;
-  gap: 8px; /* Espacio limpio entre la huella marrón y el corazón rojo */
+  gap: 8px; 
   vertical-align: middle;
-  margin-left: 6px; /* Evita que la huella choque con la palabra 'imborrable.' */
+  margin-left: 6px; 
 }
 
-/* Base general para controlar el tamaño de tus SVGs */
 .icon-svg {
-  width: 24px;  /* Un tamaño armónico y claro para que se luzca */
+  width: 24px;  
   height: 24px;
   display: inline-block;
 }
 
-/* EL TRUCO CLAVE: Pisamos el 'currentColor' con tu marrón chocolate */
 .icon-paw {
-  fill: #8B5A2B !important; /* El !important asegura que ignore el fill="currentColor" del HTML */
+  fill: #8B5A2B !important; 
 }
 
-/* Mantenemos tu corazón en rojo vibrante */
 .icon-heart {
   fill: #E24C4C;
 }
@@ -180,7 +167,6 @@ a {
   margin-bottom: 40px;
 }
 
-/* Grid de 3 columnas */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -189,37 +175,29 @@ a {
 }
 
 .member-card {
-  background-color: #F7F2E6; /* Mismo fondo crema continuo de la web */
+  background-color: #F7F2E6; 
   border-radius: 24px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  border: none; /* Chau bordes sólidos rígidos */
-  
-  /* --- LA SOLUCIÓN TÉCNICA: Sombras multicapa suaves --- */
-  /* Usamos RGBA del color #c37347 (195, 115, 71) con desenfoques altos */
-  
-  /* Capa 1: Sombra base difusa para profundidad (Desenfoque alto, baja opacidad) */
-  box-shadow: 0 10px 30px 2px rgba(195, 115, 71, 0.08), 
-              /* Capa 2: Contorno suave envolvente (Desenfoque muy alto, muy baja opacidad) */
-              0 4px 15px 0px rgba(195, 115, 71, 0.04),
-              /* Capa 3: Reflejo interno (Mismo color con bajísima opacidad) */
-              inset 0 1px 3px rgba(195, 115, 71, 0.1);
+  border: none;   
+    box-shadow: 0 10px 30px 2px rgba(195, 115, 71, 0.08), 
               
+              0 4px 15px 0px rgba(195, 115, 71, 0.04),
+             
+              inset 0 1px 3px rgba(195, 115, 71, 0.1);
+            
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* EFECTO HOVER: Eleva la tarjeta y profundiza la sombra suavemente */
 .member-card:hover {
-  
-  /* Sombras intensificadas pero manteniendo el desenfoque suave */
-  box-shadow: 0 20px 45px 5px rgba(195, 115, 71, 0.15), 
+   box-shadow: 0 20px 45px 5px rgba(195, 115, 71, 0.15), 
               0 8px 25px 0px rgba(195, 115, 71, 0.07),
               inset 0 1px 5px rgba(195, 115, 71, 0.2);
 }
-/* CONTENEDOR DE LA FOTO: Este es el bloque que se va a mover */
+
 .image-wrapper {
   width: 100%;
   height: 320px;
@@ -229,32 +207,27 @@ a {
   overflow: hidden;
   background-color: transparent;
   backface-visibility: hidden;
-  transform: translateZ(0);  
-  /* Transición para el movimiento interno de la foto */
+  transform: translateZ(0);    
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* TRUCO CLAVE: Al hacer hover en la tarjeta, SOLO se eleva la foto. El texto queda fijo */
 .member-card:hover .image-wrapper {
   transform: translateY(-8px);
 }
 
-/* Imagen integrada de la mascota */
 .member-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Cuida tus fotos completas */
+  object-fit: contain; 
   display: block;
   border-radius: 16px;
 }
 
-/* TEXTOS: Se quedan 100% estáticos en su lugar, garantizando nitidez absoluta */
 .member-info {
   padding: 16px 8px 8px 8px;
   text-align: center;
 }
 
-/* Nombre en tu Marrón Identitario */
 .member-info h3 {
   font-size: 1.5rem;
   color: #8B5A2B;
@@ -262,7 +235,6 @@ a {
   font-weight: 700;
 }
 
-/* Rol descriptivo claro */
 .member-role {
   font-size: 1.1rem;
   color: #555555;
@@ -296,43 +268,36 @@ a {
   font-weight: 600;
   margin-bottom: 40px;
 }
-
-/* Contenedor principal: alinea las flechas y la tarjeta en una sola fila horizontal */
 .single-carousel-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px; /* Espacio elegante entre las flechas y la tarjeta */
-  max-width: 650px; /* Controla el ancho máximo de toda la escena */
+  gap: 30px; 
+  max-width: 650px; 
   margin: 0 auto;
   padding: 20px;
 }
 
-/* LA TARJETA CENTRAL: Reutiliza tu hermosa sombra caramelo suave */
 .product-single-card {
   background-color: #F7F2E6;
   border-radius: 24px;
   padding: 24px;
   width: 100%;
-  max-width: 420px; /* Tamaño ideal para que se vea imponente */
+  max-width: 420px; 
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column;  
   box-shadow: 0 12px 30px rgba(195, 115, 71, 0.08), 
-              0 4px 15px rgba(195, 115, 71, 0.04);
-              
+              0 4px 15px rgba(195, 115, 71, 0.04);              
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover sutil en la tarjeta */
 .product-single-card:hover {
   box-shadow: 0 20px 40px rgba(195, 115, 71, 0.15);
 }
 
-/* Contenedor interno de la foto con fondo blanco limpio */
 .product-image-wrapper {
   width: 100%;
-  height: 350px; /* Un poco más alta para que destaque bien el producto */
+  height: 350px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -343,26 +308,24 @@ a {
 }
 
 .product-single-card:hover .product-image-wrapper {
-  transform: translateY(-6px); /* Elevación suave de la foto */
+  transform: translateY(-6px); 
 }
 
 .product-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  /* 🛠️ TRUCO COHETE: Agrandamos la imagen un 3% para empujar las líneas negras hacia afuera del área visible */
+  display: block;  
   transform: scale(1.03);
 }
 
-/* Info del producto */
 .product-info {
   padding: 18px 4px 4px 4px;
 }
 
 .product-info h3 {
   font-size: 1.3rem;
-  color: #8B5A2B; /* Tu marrón identitario */
+  color: #8B5A2B; 
   margin: 0;
   font-weight: 700;
 }
@@ -377,16 +340,17 @@ a {
   border-radius: 50%;
   font-size: 1.3rem;
   cursor: pointer;
+  position: static;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* Evita que las flechas se deformen */
+  flex-shrink: 0; 
   box-shadow: 0 4px 12px rgba(139, 90, 43, 0.25);
   transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .nav-btn:hover {
-  background-color: #c37347; /* Marrón del perrito al pasar el mouse */
+  background-color: #c37347; 
   box-shadow: 0 6px 18px rgba(195, 115, 71, 0.35);
 }
 
@@ -433,7 +397,7 @@ a {
   margin-bottom: 35px;
 }
 
-/* Sección General */
+
 .community-section {
   max-width: 1100px;
   margin: 50px auto 20px auto;
@@ -441,12 +405,12 @@ a {
   text-align: center;
 }
 
-/* Tarjeta contenedora exclusiva de la IMAGEN */
+
 .community-image-container {
   width: 100%;
   border-radius: 28px;
   overflow: hidden;
-  /* Sombra suave solo para sobreelevar la foto sobre el fondo crema */
+  
   box-shadow: 0 12px 30px rgba(195, 115, 71, 0.08);
   margin-bottom: 35px;
 }
@@ -457,7 +421,7 @@ a {
   display: block;
   
 }
-/* Bloque de texto sobre el fondo crema de la web */
+
 .community-text-block {
   padding: 10px 0 30px 0;
 }
@@ -484,7 +448,7 @@ a {
   
 }
 
-/* Estilos e interacción del SVG de Instagram */
+
 .instagram-svg-link {
   display: inline-block;
   text-decoration: none;
@@ -499,14 +463,14 @@ a {
 }
 
 .instagram-svg-link:hover {
-  transform: scale(1.18); /* Un salto elástico divertido al pasar el mouse */
+  transform: scale(1.18); 
 }
 
-/* Bloque del Agradecimiento Final */
+
 .community-thanks-block {
   margin-top: 40px;
   padding: 20px 0;
-  border-top: 1px solid rgba(195, 115, 71, 0.15); /* Una caricia de línea para separar */
+  border-top: 1px solid rgba(195, 115, 71, 0.15); 
 }
 
 .community-thanks-block p {
@@ -517,7 +481,7 @@ a {
   margin: 0;
 }
 
-/* Tarjeta Unificada de Darcy y Logo */
+
 .closure-branding-center {
   display: flex;
   flex-direction: column;
@@ -527,23 +491,23 @@ a {
 
 .darcy-logo-card {
   display: flex;
-  flex-direction: column; /* Cambiamos a columna para apilar las fotos y el texto */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
   padding: 25px 35px;
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-  max-width: 400px; /* Evita que la tarjeta se ensanche de más */
+  max-width: 400px; 
 }
 
-/* Fila interna para contener las dos imágenes lado a lado */
+
 .images-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 15px; /* Espacio antes de la frase */
+  margin-bottom: 15px;
 }
 
 .closure-logo {
@@ -561,7 +525,7 @@ a {
 }
 
 .darcy-quote {
-  margin: 0; /* Limpiamos márgenes */
+  margin: 0; 
   font-style: italic;
   font-weight: 600;
   color: #8B5A2B;
@@ -630,51 +594,71 @@ a {
   .closure-logo { width: 75px; height: 75px; }
   .closure-darcy-img { width: 110px; height: 110px; }
   
-  /* Ajustes para el Carrusel en móviles */
+ 
 
-.single-carousel-wrapper {
-  display: flex;
-  flex-direction: column; /* Esto pone los elementos uno debajo del otro */
-  align-items: center;
-  gap: 15px;
-  width: 100%;
-  padding: 10px;
-}
+  .single-carousel-wrapper {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+ 
+ .product-single-card {
+        width: 100%;
+        padding: 15px;
+        border-radius: 20px;
+    }
 
- /* Ajuste de la tarjeta para que sea más cuadrada y cómoda */
-.product-single-card {
-  width: 90%;          /* Un poco de aire a los costados */
-  max-width: 320px;    /* Tamaño ideal para que la imagen se luzca */
-  height: auto;        /* Deja que el contenido decida la altura */
-  padding: 15px;
-}
-
- /* La imagen dentro de la tarjeta */
+ 
 .product-image-wrapper {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* Mantiene la imagen perfectamente cuadrada */
-  overflow: hidden;
-  border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #F7F2E6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+   
+   
   .product-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* IMPORTANTE */
+    display: block;
+
+    transform: scale(1.02); 
 }
 
   .product-info {
-    padding: 15px;          /* Espacio para que el texto no toque el borde */
+    padding: 15px;          
     text-align: center;
   }
 
-  /* Los botones ahora debajo */
-.nav-btn {
-  position: static;    /* Quitamos el posicionamiento absoluto */
-  width: 50px;         /* Botones un poco más grandes para dedos */
-  height: 50px;
-  margin: 0 10px;      /* Espacio entre las flechas */
-}
+ .nav-btn {
+        background-color: #8B5A2B; 
+        color: #ffffff;  
+        border: none;
+        position: absolute;
+        top: 45%; 
+        margin: 0;
+        z-index: 100; 
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(139, 90, 43, 0.25);
+    }
+
+    .nav-btn:hover {
+        background-color: #C37347;
+        box-shadow: 0 6px 18px rgba(195, 115, 71, 0.35);
+    }
+
+    .prev-btn { left: -15px; }
+    .next-btn { right: -15px; }
 
   .closure-container {
     flex-direction: column;
@@ -693,25 +677,25 @@ a {
   .closure-darcy-img { width: 110px; height: 110px; }
   .paw-left, .paw-right { display: none; }
 
-  /* 1. Hacemos que el grid sea una sola columna centrada */
+  
   .team-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px; /* Espacio entre una tarjeta y otra */
+    gap: 30px; 
     padding: 0 15px;
   }
 
-  /* 2. Limitamos el ancho de las tarjetas para que no se vean gigantes */
+  
   .member-card {
-    width: 90%;          /* Ocupa el 90% de la pantalla */
-    max-width: 350px;    /* Pero no más de 350px (tamaño ideal para mobile) */
-    margin: 0;           /* Eliminamos márgenes laterales automáticos */
+    width: 90%;         
+    max-width: 350px;   
+    margin: 0;          
   }
 
-  /* 3. Ajustamos la imagen para que tenga una altura fija y elegante */
+  
   .image-wrapper {
-    height: 280px;       /* Altura controlada */
+    height: 280px;      
     overflow: hidden;
     border-radius: 20px;
   }
@@ -719,11 +703,11 @@ a {
   .member-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* Esto evita que se estire la foto */
+    object-fit: cover;  
     object-position: top center;
   }
 
-  /* Subclase específica para Darcy (para que se vea centrado) */
+  
 .member-img.darcy-adjust {
     object-position: center center; 
 }
@@ -744,7 +728,7 @@ a {
     object-position: center center; 
 }
 
-  /* 4. Ajustamos los textos para que no se vean enormes */
+  
   .member-info h3 {
     font-size: 1.4rem;
     margin-top: 15px;
@@ -757,10 +741,10 @@ a {
   .member-info, 
     .member-role, 
     .product-info {
-        font-size: 1.1rem;            /* Ajusta el tamaño para que quepa todo */
-        word-wrap: break-word;      /* Fuerza a que el texto baje de línea si no cabe */
-        hyphens: auto;              /* Mejora la estética si debe cortar palabras largas */
-        white-space: normal;        /* Asegura que el texto pueda saltar a la siguiente línea */
+        font-size: 1.1rem;            
+        word-wrap: break-word;      
+        hyphens: auto;              
+        white-space: normal;       
     }
 
     
