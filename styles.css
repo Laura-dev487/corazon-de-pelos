@@ -1,15 +1,13 @@
 /* ==========================================================================
    1. VARIABLES DE DISEÑO (Custom Properties)
    ========================================================================== */
-:root {
- 
+:root { 
   --color-bg-main: #F7F2E6;     
   --color-bg-pattern: #F1E8D9; 
    --color-text: #040202;         
   --color-white: #FFFFFF; 
   --font-main: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
 }
-
 /* ==========================================================================
    2. RESET DE ACCESIBILIDAD Y RENDIMIENTO
    ========================================================================== */
@@ -18,12 +16,10 @@
   margin: 0;
   padding: 0;
 }
-
 html {  
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
-
 body {
   font-family: var(--font-main);
   font-weight: 400;
@@ -35,38 +31,31 @@ body {
   -moz-osx-font-smoothing: grayscale; 
   
 }
-
 img, picture, svg {
   max-width: 100%;
   display: block;
 }
-
 button, input, select, textarea {
   font: inherit;
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
 /* ==========================================================================
    HEADER Y BANNER (Estrategia Fluid-Contain)
    ========================================================================== */
-
 .main-header {
   width: 100%;  
   background-color: var(--color-bg-main); 
   overflow: hidden;
 }
-
 .banner-container {
   width: 100%;
   max-width: 1200px; 
   margin: 0 auto;   
   display: block;
 }
-
 .banner-img {
   width: 100%;  
   height: 40vh; 
@@ -76,24 +65,20 @@ a {
   object-position: center center;  
   display: block;
 }
-
 /* ==========================================================================
    SECCIÓN: HISTORIA (Storytelling)
    ========================================================================== */
-
 .story-section {
   padding: 60px 20px 40px 20px; 
   text-align: center;
 }
-
-.story-main-content {
+  .story-main-content {
         display: grid;        
         grid-template-columns: 1fr 450px; 
         gap: 40px;
         align-items: start;
-    }
-
-.story-container {
+}
+  .story-container {
     display: grid;   
     grid-template-columns: 1fr auto; 
     gap: 40px;
@@ -102,7 +87,6 @@ a {
     margin: 0 auto;
     padding: 60px 40px;
 }
-
  .story-image-wrapper {
         float: right; 
         width: 100%;
@@ -112,28 +96,23 @@ a {
         margin-left: 30px;
         margin-bottom: 20px; 
         margin-top: -10px; 
-    }
-
- .story-img {
+}
+.story-img {
         width: 100%;
         height: auto;
         border-radius: 20px;
         display: block;
-    }
-
-    
-    .story-lead, .story-text {
+    }    
+.story-lead, .story-text {
         overflow: visible;
         clear: none; 
-    }
-
+}
 .story-lead {
   font-size: 1.25rem;
   color: #4a4a4a;
   margin-bottom: 24px;
   font-weight: 500;
 }
-
 .story-text {
   font-size: 1.2rem;
   font-weight: 500;
@@ -144,7 +123,6 @@ a {
   padding: 24px;
   border-radius: 12px;
 }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -155,7 +133,6 @@ a {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
 .story-icons {
   display: inline-flex;
   align-items: center;
@@ -163,53 +140,44 @@ a {
   vertical-align: middle;
   margin-left: 6px; 
 }
-
 .icon-svg {
   width: 24px;  
   height: 24px;
   display: inline-block;
 }
-
 .icon-paw {
   fill: #8B5A2B !important; 
 }
-
 .icon-heart {
   fill: #E24C4C;
 }
-
 /* ==========================================================================
    3. SECCIÓN DEL STAFF (3D con Profundidad y Hover Antidesenfoque)
    ========================================================================== */
-
 .team-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
   text-align: center;
 }
-
 .team-header h2 {
   font-size: 2.2rem;
   color: #333333;
   margin-bottom: 12px;
   font-weight: 700;
 }
-
 .team-subtitle {
   color: #626262;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 40px;
 }
-
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 35px;
   justify-content: center;
 }
-
 .member-card {
   background-color: #F7F2E6; 
   border-radius: 24px;
@@ -227,13 +195,11 @@ a {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .member-card:hover {
    box-shadow: 0 20px 45px 5px rgba(195, 115, 71, 0.15), 
               0 8px 25px 0px rgba(195, 115, 71, 0.07),
               inset 0 1px 5px rgba(195, 115, 71, 0.2);
 }
-
 .image-wrapper {
   width: 100%;
   height: 320px;
@@ -246,11 +212,9 @@ a {
   transform: translateZ(0);    
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .member-card:hover .image-wrapper {
   transform: translateY(-8px);
 }
-
 .member-img {
   width: 100%;
   height: 100%;
@@ -258,19 +222,16 @@ a {
   display: block;
   border-radius: 16px;
 }
-
 .member-info {
   padding: 16px 8px 8px 8px;
   text-align: center;
 }
-
 .member-info h3 {
   font-size: 1.5rem;
   color: #8B5A2B;
   margin: 0 0 6px 0;
   font-weight: 700;
 }
-
 .member-role {
   font-size: 1.1rem;
   color: #555555;
@@ -278,32 +239,44 @@ a {
   line-height: 1.4;
   margin: 0;
 }
-
 /* ==========================================================================
    4. SECCIÓN DE PRODUCTOS (Diseño de Tarjeta Única y Flechas a los Lados)
    ========================================================================== */
-
 .products-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
-  text-align: center;
-  
+  text-align: center;  
 }
-
 .products-header h2 {
   font-size: 2.2rem;
   color: #333333;
   margin-bottom: 12px;
   font-weight: 700;
 }
-
 .products-subtitle {
   color: #626262;
+  max-width: 600px;
+    margin: 10px auto;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 40px;
 }
+.catalog-disclaimer {
+    font-size: 1.2rem; 
+    color: #555;       
+    margin-top: 20px;   
+    line-height: 1.4;
+    margin-bottom: 70px;
+    font-style: italic;
+    text-align: center;
+}
+
+.catalog-disclaimer .titulo-fucsia {
+    color: #d62976;
+    font-weight: 500; 
+}
+
 .single-carousel-wrapper {
   display: flex;
   align-items: center;
@@ -313,7 +286,6 @@ a {
   margin: 0 auto;
   padding: 20px;
 }
-
 .product-single-card {
   background-color: #F7F2E6;
   border-radius: 24px;
@@ -326,11 +298,9 @@ a {
               0 4px 15px rgba(195, 115, 71, 0.04);              
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
 .product-single-card:hover {
   box-shadow: 0 20px 40px rgba(195, 115, 71, 0.15);
 }
-
 .product-image-wrapper {
   width: 100%;
   height: 350px; 
@@ -342,11 +312,9 @@ a {
   border-radius: 16px;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .product-single-card:hover .product-image-wrapper {
   transform: translateY(-6px); 
 }
-
 .product-img {
   width: 100%;
   height: 100%;
@@ -354,18 +322,15 @@ a {
   display: block;  
   transform: scale(1.03);
 }
-
 .product-info {
   padding: 18px 4px 4px 4px;
 }
-
 .product-info h3 {
   font-size: 1.3rem;
   color: #8B5A2B; 
   margin: 0;
   font-weight: 700;
 }
-
 /* --- LAS FLECHAS DE CONTROL A LOS LADOS --- */
 .nav-btn {
   background-color: #8B5A2B;
@@ -384,12 +349,10 @@ a {
   box-shadow: 0 4px 12px rgba(139, 90, 43, 0.25);
   transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
-
 .nav-btn:hover {
   background-color: #c37347; 
   box-shadow: 0 6px 18px rgba(195, 115, 71, 0.35);
 }
-
 .prev-btn:hover { transform: scale(1.08) translateX(-2px); }
 .next-btn:hover { transform: scale(1.08) translateX(2px); }
 
@@ -401,81 +364,66 @@ a {
   padding: 80px 20px 60px 20px;
   position: relative;
   overflow: hidden;
-  margin-top: -60px;
+  margin-top: -110px;
 }
-
-
 .closure-stacked-container {
   max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 45px;
+  gap: 25px;
 }
-
 .closure-content-text {
   text-align: center;
   width: 100%;
 }
-
 .closure-content-text h2 {
   font-size: 2.2rem;
   color: #8B5A2B;
   margin-bottom: 20px;
   font-weight: 700;
 }
-
 .closure-emotive-text {
   font-size: 1.15rem;
   color: #555555;
   line-height: 1.7;
   margin-bottom: 35px;
 }
-
-
 .community-section {
   max-width: 1100px;
   margin: 50px auto 20px auto;
   padding: 0 20px;
   text-align: center;
 }
-
-
 .community-image-container {
   width: 100%;
   border-radius: 28px;
-  overflow: hidden;
-  
+  overflow: hidden;  
   box-shadow: 0 12px 30px rgba(195, 115, 71, 0.08);
   margin-bottom: 35px;
 }
-
 .community-main-img {
   width: 100%;
   height: auto;
   display: block;
   
 }
-
 .community-text-block {
   padding: 10px 0 30px 0;
 }
-
 .community-heading {
   font-size: 2.3rem;
   color: #8B5A2B; 
   font-weight: 700;
   margin-bottom: 6px;
 }
-
 .community-subheading {
   font-size: 1.3rem;
   color: #555555;
   font-style: italic;
   margin-bottom: 25px;
 }
-
 .community-cta {
   color: #626262;
   font-size: 1.1rem;
@@ -483,32 +431,25 @@ a {
   margin-bottom: 18px;
   
 }
-
-
 .instagram-svg-link {
   display: inline-block;
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .instagram-icon {
   width: 42px;
   height: 42px;
   fill: url(#instagram-gradient); 
   margin-top: 30px;
 }
-
 .instagram-svg-link:hover {
   transform: scale(1.18); 
 }
-
-
 .community-thanks-block {
   margin-top: 40px;
   padding: 20px 0;
   border-top: 1px solid rgba(195, 115, 71, 0.15); 
 }
-
 .community-thanks-block p {
   font-size: 1.4rem;
   color: #8B5A2B;
@@ -516,15 +457,12 @@ a {
   letter-spacing: 0.3px;
   margin: 0;
 }
-
-
 .closure-branding-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-
 .darcy-logo-card {
   display: flex;
   flex-direction: column; 
@@ -536,8 +474,6 @@ a {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
   max-width: 400px; 
 }
-
-
 .images-row {
   display: flex;
   align-items: center;
@@ -545,13 +481,11 @@ a {
   gap: 20px;
   margin-bottom: 15px;
 }
-
 .closure-logo {
   width: 90px;
   height: 90px;
   object-fit: contain;
 }
-
 .closure-darcy-img {
   width: 120px;
   height: 120px;
@@ -559,7 +493,6 @@ a {
   border-radius: 16px;
   border: 3px solid #8B5A2B;
 }
-
 .darcy-quote {
   margin: 0; 
   font-style: italic;
@@ -568,8 +501,6 @@ a {
   font-size: 1.1rem;
   text-align: center;
 }
-
-
 /* ==========================================================================
    6. MAIN FOOTER (Pie de página)
    ========================================================================== */
@@ -580,7 +511,6 @@ a {
   text-align: center;
   font-size: 1.1rem;
 }
-
 .footer-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -589,12 +519,10 @@ a {
   gap: 8px;
   align-items: center;
 }
-
 .developer-credit {
   font-size: 1.2rem;
   color: #b0b0b0;
 }
-
 .footer-link {
   color: #e67e22;
   text-decoration: none;
@@ -602,19 +530,15 @@ a {
   transition: color 0.2s ease, border-bottom 0.2s ease;
   border-bottom: 1px solid transparent;
 }
-
 .footer-link:hover {
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 
-
 @media (max-width: 780px) {
-
 .banner-img {
     height: 50vh; 
   }
-
   .story-main-content {
     display: block; 
 }
@@ -624,96 +548,74 @@ a {
         gap: 20px;
         padding: 20px;
     }
-
   .story-image-wrapper {
         float: none; 
         margin: 20px auto;
         text-align: center;
-    }
-    
+    }    
     .story-img {
         max-width: 100%;
         border-radius: 20px;
-    }
-    
+    }    
   .story-text-wrapper {
         order: 1; 
-    } 
-  
+    }   
   .story-image-wrapper {
         order: 2; 
         margin-top: 20px; 
     }  
-
   .story-section, .team-section {
     margin: 0 !important;
 } 
-
 .story-section {
     padding-bottom: 0 !important;
-}
-  
-
+    padding-top: 10px !important;
+} 
   .instagram-cta-wrapper {
     flex-direction: column;
     text-align: center;
     gap: 15px;
     padding: 20px;
-  }
-  
+  }  
   .darcy-logo-card {
     gap: 15px;
     padding: 15px;
-  }
-  
+  }  
   .closure-logo { width: 75px; height: 75px; }
   .closure-darcy-img { width: 110px; height: 110px; }
-  
- 
-
-  .single-carousel-wrapper {
+   .single-carousel-wrapper {
         position: relative;
         width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 0 10px;
-    }
- 
+    } 
  .product-single-card {
         width: 100%;
         padding: 15px;
         border-radius: 20px;
-    }
-
- 
+    } 
 .product-image-wrapper {
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 16px;
     background-color: #F7F2E6;
-
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-   
-   
+}   
   .product-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* IMPORTANTE */
+    object-fit: cover; 
     display: block;
-
     transform: scale(1.02); 
 }
-
   .product-info {
     padding: 15px;          
     text-align: center;
   }
-
  .nav-btn {
         background-color: #8B5A2B; 
         color: #ffffff;  
@@ -726,32 +628,26 @@ a {
         border-radius: 50%;
         box-shadow: 0 4px 12px rgba(139, 90, 43, 0.25);
     }
-
     .nav-btn:hover {
         background-color: #C37347;
         box-shadow: 0 6px 18px rgba(195, 115, 71, 0.35);
     }
-
     .prev-btn { left: -15px; }
     .next-btn { right: -15px; }
-
   .closure-container {
     flex-direction: column;
     text-align: center;
     gap: 40px;
-  }
-  
+  }  
   .closure-text-block {
     text-align: center;
   }
-
   .images-row {
     gap: 15px;
   }
   .closure-logo { width: 80px; height: 80px; }
   .closure-darcy-img { width: 110px; height: 110px; }
   .paw-left, .paw-right { display: none; }
-
   
   .team-grid {
     display: flex;
@@ -759,60 +655,30 @@ a {
     align-items: center;
     gap: 30px; 
     padding: 0 15px;
-  }
-
-  
+  }  
   .member-card {
     width: 90%;         
     max-width: 350px;   
     margin: 0;          
-  }
-
-  
+  }  
   .image-wrapper {
     height: 280px;      
     overflow: hidden;
     border-radius: 20px;
   }
-
   .member-img {
     width: 100%;
     height: 100%;
     object-fit: cover;  
-    object-position: top center;
-  }
-
-  
-.member-img.darcy-adjust {
-    object-position: center center; 
-}
-
-.member-img.pichin-adjust {
-    object-position: center center; 
-}
-
-.member-img.dimi-adjust {
-    object-position: center center; 
-}
-
-.member-img.salem-adjust {
-    object-position: center center; 
-}
-
-.member-img.guiza-adjust {
-    object-position: center center; 
-}
-
-  
+    object-position: center center;
+  }  
   .member-info h3 {
     font-size: 1.4rem;
     margin-top: 15px;
   }
-
   .member-role {   
     margin-top: 5px;
   }
-
   .member-info, 
     .member-role, 
     .product-info {
@@ -820,9 +686,7 @@ a {
         word-wrap: break-word;      
         hyphens: auto;              
         white-space: normal;       
-    }
-
-    
+    }    
 }
   
   
