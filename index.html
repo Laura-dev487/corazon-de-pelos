@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corazón de Pelos - Accesorios e Historias con Amor </title>
-    
+    <title>Corazón de Pelos - Accesorios e Historias con Amor </title>    
     <meta name="description" content="Nacidos del amor genuino por los animales. Accesorios, llaveros y recuerdos artesanales para llevar a tu mascota siempre cerca del corazón. Hecho en Quilmes.">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="img/banner-1658.webp" as="image">
     <link rel="stylesheet" href="styles.css">
 
     </head>
@@ -25,6 +25,7 @@
           img/banner-1658.webp 1658w" 
   sizes="100vw" 
   alt="Ilustración central de Corazón De Pelos con tres perritos tiernos" 
+  fetchpriority="high"
   class="banner-img"
   width="1658" 
   height="949"
@@ -303,7 +304,7 @@
     <h2>Nuestros Productos Destacados</h2>
     <p class="products-subtitle">Una selección exclusiva de accesorios importados, elegidos con todo el amor y dedicación que nuestras mascotas merecen.</p>
     <p class="catalog-disclaimer">
-    <strong>¿Te gustó algo? </strong><br><span class="titulo-fucsia">Consultá stock y precios<br> enviándonos un mensaje directo por Instagram.</span>
+    <strong>¿Te gustó algo? </strong><br><span class="titulo-fucsia">Consultá stock y precios<br> enviándonos un mensaje directo por <a href="https://www.instagram.com/corazon.de.pelos/" target="_blank" class="btn-instagram"> Instagram</a></span>
   </p>
   </div>
 
@@ -312,7 +313,9 @@
     
     <div class="product-single-card" id="productCard">
       <div class="product-image-wrapper">
-        <img src="img/abrelatas.webp" id="carouselImg" class="product-img">
+        <img src="img/abrelatas.webp"
+         id="carouselImg" class="product-img"
+        alt="Abrelatas ergonómico color rojo para comida de mascotas">
       </div>
       <div class="product-info">
         <h3 id="carouselTitle">Abrelatas</h3>
@@ -356,7 +359,7 @@
          sizes="(max-width: 600px) 100vw, 
                 (max-width: 1024px) 80vw, 
                 1152px"
-         alt="El gran equipo de mascotas de Corazón de Pelos reunido: perros, gatos, el loro y la tortuga." 
+         alt="El gran equipo de mascotas de Corazón de Pelos reunido: perros, gatos, el loro y la tortuga",
          class="community-main-img"
          loading="lazy">
 </div>

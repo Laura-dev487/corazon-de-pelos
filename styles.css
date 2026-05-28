@@ -262,6 +262,21 @@ a {
   font-weight: 600;
   margin-bottom: 40px;
 }
+.btn-instagram {
+    display: inline-block;          
+    background: linear-gradient(246deg, #BF2DB5 11.34%, #FB3477 49.37%, #FF3259 87.91%);   
+    color: #ffffff;                 
+    padding: 5px 15px;            
+    border-radius: 10px;          
+    text-decoration: none;          
+    font-weight: bold;
+    transition: transform 0.2s;
+    margin: 8px 0;    
+}
+.btn-instagram:hover {
+    background-color: #a31f5a;      
+    transform: scale(1.05);        
+}
 .catalog-disclaimer {
     font-size: 1.2rem; 
     color: #555;       
@@ -273,7 +288,7 @@ a {
 }
 
 .catalog-disclaimer .titulo-fucsia {
-    color: #d62976;
+    color: #CD237E;
     font-weight: 500; 
 }
 
